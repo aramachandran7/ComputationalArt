@@ -27,6 +27,8 @@ function setup() {
 
 function draw() {
   // iteratively loop through the triangles in the image.
+  // Grayscale integer value
+  background(51);
   for (i=0; i < xsize/xlength; i ++){
     // create color gradient by changing reference R, G, and B values
     // for every new column.
@@ -35,7 +37,7 @@ function draw() {
     b+=15
     for (z=0; z<ysize/ylength; z++){
       // drawing triangles with 5 levels of recursion
-      drawTriangle(i*xlength, z*ylength, xlength, ylength, 5)
+      drawTriangle(i*xlength, z*ylength, xlength, ylength, 4)
     }
   }
 }
